@@ -1,2 +1,7 @@
 # ZDHsys
-新手小白编写的，基于golang和saltstack实现自动安装操作系统的平台
+
+Platform for automatic installation of operating system based on golang and saltstack
+
+The main implementation of binding MAC address, independent installation of the operating system, change the host name, IP address
+
+The project is still being updated...
