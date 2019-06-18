@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户信息</title>
+</head>
+<body>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#home">添加用户</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table border="0">
+            <form  role="form" action="/user/roleadd" method="post">
+
+                <tr>用户名：<input class="form-control" width="400px" type="text" name="username"></tr>
+                <tr>真实姓名:<input class="form-control" width="400px" type="text" name="name"></tr>
+                <tr>角色:<input class="form-control" width="400px" type="text" name="role"></tr>
+                <tr>所属产品线:<input class="form-control" width="400px" type="text" name="line"></tr>
+                <tr>部门:<input class="form-control" width="400px" type="text" name="section"></tr>
+                <tr><input type="submit" value="提交"></tr>
+
+            </form>
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加主机页面</title>
+</head>
+<body>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="/server/srvexist">现有机器</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table border="0">
+            <form role="form" action="/server/srvadd?mac={{.server.Mac}}" method="post">
+                <tr>mac地址：<input class="form-control" width="400px" type="text" name="mac" value="{{.server.Mac}}"></tr>
+                <tr>主机IP：<input class="form-control" width="400px" type="text" name="server_ip"></tr>
+                <tr>操作系统:<select class="form-control" width="400px" name="os">
+                        <option>centos7.5-x86_64</option>
+                        <option>windows_10_x64</option>
+                        <option>ios</option>
+                    </select></tr>
+               <!-- <p>
+                <tr><input type="checkbox" name="desktop" value="yes" /> 是否添加监控</tr>
+                <p>-->
+                <tr>主机名:<input class="form-control" width="400px" type="text" name="servername"></tr>
+                <!--<tr>业务线:<input class="form-control" width="400px" type="text" name="line"></tr>
+                <tr>运维人员:<input class="form-control" width="400px" type="text" name="ywman"></tr>  -->
+                <tr><input type="submit" value="提交"></tr>
+
+            </form>
+
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息页面</title>
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#">用户信息</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table width="90%" cellspacing="1" cellpadding="1" border="1" align="center">
+            <tr align="center">
+                <td>用户ID</td>
+                <td>用户名</td>
+                <td>真实姓名</td>
+                <td>角色</td>
+                <td>所属产品线</td>
+                <td>部门</td>
+                <td>删除</td>
+                <td>编辑</td>
+            </tr>
+            {{range .roles}}
+                <tr align="center">
+                    <td>{{.Id}}</td>
+                    <td>{{.Username}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Role}}</td>
+                    <td>{{.Line}}</td>
+                    <td>{{.Section}}</td>
+                    <td><a href="/user/delete?id={{.Id}}">删除</td>
+                    <td><a href="/user/userupdate?id={{.Id}}">编辑</td>
+                </tr>
+            {{end}}
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+
+
+
+</body>
+</html>

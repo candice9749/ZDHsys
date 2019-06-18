@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>录入机器页面</title>
+</head>
+<body>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="/server/srvexist">现有机器</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table border="0">
+            <form  role="form" action="/server/srvinput" method="post">
+
+
+                <tr>MAC地址:<input class="form-control" width="400px" type="text" name="mac"></tr>
+                <tr>地点:<input class="form-control" width="400px" type="text" name="addr"></tr>
+
+                <tr><input type="submit" value="提交"></tr>
+
+            </form>
+
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>硬件信息</title>
+</head>
+<body>
+<div >
+    <h3>主机硬件信息</h3>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+            <table border="0">
+                    <tr align="center">主机名：{{.server.Hostname}}</tr><br><br>
+                    <tr align="center">cpu：{{.server.Cpu}}</tr><br><br>
+                    <tr align="center">内存(M)：{{.server.Memory}}</tr><br><br>
+                   <tr align="center">内核版本: {{.Kernelversion}}</tr><br><br>
+                <tr align="center">操作系统: {{.server.Os}}</tr><br><br>
+            </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

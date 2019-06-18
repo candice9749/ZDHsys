@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现有机器页面</title>
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="/server/srvexist">现有机器</a></li>
+</ul>
+
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table width="90%" cellspacing="1" cellpadding="1" border="1" align="center">
+            <tr align="center">
+                <td>主机ID</td>
+                <td>MAC地址</td>
+                <td>生产时间</td>
+                <td>地点</td>
+                <td>操作系统</td>
+                <td>部署</td>
+            </tr>
+            {{range .servers}}
+                <tr align="center">
+                    <td>{{.Id}}</td>
+                    <td>{{.Mac}}</td>
+                    <td>{{.Stime.Format "2006-01-02"}}</td>
+                    <td>{{.Addr}}</td>
+                    <td>{{.Os}}</td>
+                    <td><a href="/server/srvadd?mac={{.Mac}}">部署</td>
+                </tr>
+            {{end}}
+
+        </table>
+
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+<button type="submit" class="btn" ><a href="/server/srvinput.html">录入机器</button>
+
+
+</body>
+</html>

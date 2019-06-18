@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主机信息页面</title>
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#home">主机信息</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table width="90%" cellspacing="1" cellpadding="1" border="1" align="center">
+           <tr align="center">
+            <td>主机ID</td>
+            <td>主机IP</td>
+            <td>主机名</td>
+            <td>操作系统</td>
+            <td>生产时间</td>
+            <td>地点</td>
+            <td>硬件信息</td>
+          <!--  <td>业务线</td>
+            <td>运维人员</td>  -->
+            <td>删除</td>
+            <td>编辑</td>
+           </tr>
+{{range .servers}}
+            <tr align="center">
+                <td>{{.Id}}</td>
+                <td>{{.Serverip}}</td>
+                <td>{{.Hostname}}</td>
+                <td>{{.Os}}</td>
+                <td>{{.Stime.Format "2006-01-02"}}</td>
+                <td>{{.Addr}}</td>
+                <td><a href="/server/hardinfo.html?serverip={{.Serverip}}">硬件信息</td>
+           <!--     <td>{{.Line}}</td>
+                <td>{{.Ywman}}</td>  -->
+                <td><a href="/server/delete?serverip={{.Serverip}}">删除</td>
+                <td><a href="/server/srvupdate?serverip={{.Serverip}}">编辑</td>
+
+            </tr>
+{{end}}
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+
+
+
+</body>
+</html>

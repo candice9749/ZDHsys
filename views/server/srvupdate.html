@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更改主机信息页面</title>
+</head>
+<body>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#home">更新主机</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home" style="margin: 30px 0">
+        <table border="0">
+            <form  role="form" action="/server/srvupdate?id={{.server.Id}}" method="post">
+                <tr>mac地址：<input class="form-control" width="400px" type="text" name="mac" value="{{.server.Mac}}"></tr>
+                <tr>主机IP：<input class="form-control" width="400px" type="text" name="server_ip" value="{{.server.Serverip}}"></tr>
+                <tr>操作系统:<input class="form-control" width="400px" type="text" name="os" value="{{.server.Os}}"></tr>
+                <tr>主机名:<input class="form-control" width="400px" type="text" name="servername" value="{{.server.Hostname}}"></tr>
+                <tr>业务线:<input class="form-control" width="400px" type="text" name="line" value="{{.server.Line}}"></tr>
+                <tr>运维人员:<input class="form-control" width="400px" type="text" name="ywman" value="{{.server.Ywman}}"></tr>
+                <tr><input type="submit" value="更新"></tr>
+
+            </form>
+        </table>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+
+</body>
+</html>
