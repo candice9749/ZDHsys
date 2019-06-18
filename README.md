@@ -1,0 +1,2 @@
+# ZDHsys
+新手小白编写的，基于golang和saltstack实现自动安装操作系统的平台
