@@ -1,5 +1,3 @@
-[TOC]
-
 # ZDHsys
 
 Platform for automatic installation of operating system based on golang and saltstack
