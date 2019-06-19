@@ -52,7 +52,7 @@ The project is still being updated...
 # yum install -y python-devel
 # go get github.com/sbinet/go-python
 # mkdir -p /root/go/src/golang.org/x
-# cd $GOPATH/src/golang.org/x
+# cd /root/go/src/golang.org/x
 # git clone https://github.com/golang/crypto.git
 ```
 
