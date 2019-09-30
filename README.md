@@ -32,6 +32,7 @@ The project is still being updated...
 
 ```shell
 # yum install -y git
+# git config --global url."git://github.com/astaxie/beego".insteadOf "https://github.com/astaxie/beego"
 # go get github.com/astaxie/beego
 # go get github.com/beego/bee
 # go get github.com/astaxie/beego/orm
